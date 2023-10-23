@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <!--Nav Section Start-->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light text-dark sticky-top"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="">Riswan Hidayat</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="artikel.html">Artikel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript.html">Javascript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kalkulator.html">Kalkulator</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Others
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="jadwal mata kuliah.html"
+                    >Mata Kuliah</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="form buku tamu.html"
+                    >Buku Tamu</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Daftar barang.html"
+                    >Daftar Barang</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="pendidikan.html">Pendidikan</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              x`
+            />
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--Nav Section End-->
+    <div class="container mt-4">
+      <h2 class="text-center">Menghitung Luas Persegi Panjang</h2>
+      <label for="panjang">Panjang :</label>
+      <input type="number" id="panjang" class="form-control" />
+
+      <label for="lebar" class="mt-3">Lebar :</label>
+      <input type="number" id="lebar" class="form-control" />
+
+      <button class="btn btn-primary mt-3" onclick="hitungLuas()">
+        Hitung Luas
+      </button>
+      <div class="mt-3">
+        <label for="hasilLuas">Hasil :</label>
+        <p class="form-control" id="hasilLuas"></p>
+      </div>
+
+      <script>
+        function hitungLuas() {
+          var panjang = parseFloat(document.getElementById("panjang").value);
+          var lebar = parseFloat(document.getElementById("lebar").value);
+          var luas = panjang * lebar;
+
+          document.getElementById("hasilLuas").innerHTML =
+            "Luas Persegi Panjang Adalah : " + luas;
+        }
+      </script>
+
+      <h2 class="text-center mt-5">Pemeriksaan Angka</h2>
+      <label for="angka" class="mt-3">Masukkan Angka :</label>
+      <input type="number" id="angka" class="form-control" />
+
+      <button class="btn btn-primary mt-4" onclick="pemeriksaanAngka()">
+        Periksa Angka
+      </button>
+      <div class="mt-3">
+        <label for="hasilPemeriksaan">Hasil :</label>
+        <p class="form-control" id="hasilPemeriksaan"></p>
+      </div>
+
+      <script>
+        function pemeriksaanAngka() {
+          var angka = parseFloat(document.getElementById("angka").value);
+
+          if (angka > 0) {
+            document.getElementById("hasilPemeriksaan").innerHTML =
+              angka + " adalah angka positif.";
+          } else if (angka < 0) {
+            document.getElementById("hasilPemeriksaan").innerHTML =
+              angka + " adalah angka negatif.";
+          } else {
+            document.getElementById("hasilPemeriksaan").innerHTML =
+              angka + " adalah nol.";
+          }
+        }
+      </script>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

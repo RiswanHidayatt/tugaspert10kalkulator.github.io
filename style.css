@@ -1,0 +1,21 @@
+/* CSS untuk tampilan halaman */
+.text-center {
+    text-align: center;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* CSS untuk tata letak */
+.mt-3 {
+    margin-top: 15px;
+}
